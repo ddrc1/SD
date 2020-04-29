@@ -14,7 +14,7 @@ public class mainCompressor {
     private static long start;
 
     public static void main(String[] args) throws IOException {
-        String path = "./pasta";
+        String path = "D:\\Projetos\\Java\\Sistema Distribuido\\av1\\Atividade3\\pasta";
         File dir = new File(path);
         List<String> listFiles = Arrays.asList(dir.list());
         Compressor compressor = new Compressor(path);
@@ -30,11 +30,11 @@ public class mainCompressor {
 
         compressor.start();
 
-        System.out.println("Execução multi thread");
-
-        for (Compressor comp: compressors) {
-            comp.start();
-        }
+//        System.out.println("Execução multi thread");
+//
+//        for (Compressor comp: compressors) {
+//            comp.start();
+//        }
 
     }
 
