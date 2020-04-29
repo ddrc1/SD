@@ -1,4 +1,4 @@
-package Atividade5;
+package atividade5;
 
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
