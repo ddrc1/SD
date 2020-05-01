@@ -9,12 +9,13 @@ public class EchoServer {
 		byte[] buffer = new byte[1000];
 		
 		DatagramSocket socket = new DatagramSocket(porta);
-		
+		DatagramPacket pacote;
+		String conteudo; 
 		while (true) {
-			DatagramPacket pacote = new DatagramPacket(buffer, buffer.length);
+			pacote = new DatagramPacket(buffer, buffer.length);
 			socket.receive(pacote);
 			
-			String conteudo = new String(pacote.getData(), 0, pacote.getLength());
+			conteudo = new String(pacote.getData(), 0, pacote.getLength());
 			
 			System.out.println("Conteudo do pacote: " + conteudo);
 			
